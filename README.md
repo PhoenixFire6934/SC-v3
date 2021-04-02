@@ -1,5 +1,5 @@
 ## SC-v3 decompression
-Simple Python script for decompressing the new version of `.sc` files.
+Simple Python script for decompressing/compressing the new version of `.sc` files.
 
 #### Requirements
 - Python 3.7 or higher
