@@ -1,10 +1,22 @@
-from lib.decompress import SCv3Decompressor
+from lib.decompression import SCv3Decompressor
+from lib.compression import SCv3Compressor
 
-inputFile  = input("Enter filename: ")
-outputFile = input("Enter output filename: ")
+def runTool(userOption, inputFile, outputFile):
+    data = open(inputFile, 'rb').read()
 
-with open(inputFile, 'rb') as f:
-    data = f.read()
+    if userOption == '1':
+        SCv3Decompressor(data).setupDecompression(outputFile)
 
-    decompressor = SCv3Decompressor(data)
-    decompressor.setup(outputFile)
+    elif userOption == '2':
+        SCv3Compressor(data).setupCompression(outputFile)
+
+    else:
+        print(f"Unexpected option: {userOption}")
+
+
+if __name__ == '__main__':
+    userOption = input("1 - Decompress\n2 - Compress\n\nEnter your option: ")
+    inputFile  = input("Enter filename: ")
+    outputFile = input("Enter output filename: ")
+
+    runTool(userOption, inputFile, outputFile)
