@@ -4,6 +4,6 @@ Simple Python script for decompressing the new version of `.sc` files.
 #### Requirements
 - Python 3.7 or higher
 - Zstandard module
-#### Usage
+#### Setup
 1. Install **zstandard** module: `pip install zstandard`
 2. Run the tool: `python main.py`
