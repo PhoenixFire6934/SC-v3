@@ -29,7 +29,6 @@ class SCv3Decompressor():
         return self.decompressedData
 
 
-
     def setupDecompression(self, filename):
         self.decompressedData = self.decompressSC()
 
